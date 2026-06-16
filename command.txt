@@ -1,0 +1,7 @@
+# 빈 줄과 # 주석은 무시됩니다
+list
+add 4 David 88
+update 99 70
+find 4
+save
+exit
