@@ -1,7 +1,10 @@
-# 빈 줄과 # 주석은 무시됩니다
 list
-add 4 David 88
-update 99 70
-find 4
+add 6 Frank 92
+update 2 95
+find 6
+delete 3
+stats
+sort score
+list
 save
 exit
