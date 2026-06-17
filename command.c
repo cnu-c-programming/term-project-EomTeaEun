@@ -251,12 +251,12 @@ static ShellResult handle_sort(char* args, Student** head) {
     }
     if (strcmp(tokens[0], "name") == 0) {
         student_sort_by_name(head);
-        printf("Sorted by name.\n");
+        printf("sorted by name.\n");
         return SHELL_OK;
     }
     if (strcmp(tokens[0], "score") == 0) {
         student_sort_by_score(head);
-        printf("Sorted by score.\n");
+        printf("sorted by score.\n");
         return SHELL_OK;
     }
     return SHELL_ERR_INVALID_ARGUMENT; // 잘못된 정렬 키 

@@ -1,10 +1,10 @@
 list
-add 6 Frank 92
-update 2 95
-find 6
-delete 3
 stats
+add 101 Newbie 88
+update 1 100
+find 101
+delete 2
+update 999 70
 sort score
-list
 save
 exit

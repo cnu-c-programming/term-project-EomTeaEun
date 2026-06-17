@@ -133,7 +133,6 @@ void run_command_file(const char *cmd_file, const char *csv_path) {
     char line[LINE_BUF];
     int line_no = 0;
     while (fgets(line, sizeof(line), fp) != NULL) {
-        line_no++;
         chomp(line);
         char *p = line;
         while (*p == ' ' || *p == '\t') {
@@ -142,6 +141,7 @@ void run_command_file(const char *cmd_file, const char *csv_path) {
         if (*p == '\0' || *p == '#') {
             continue; // 빈 줄과 # 주석은 건너뜀 
         }
+        line_no++;
         printf("[command file:%d] %s\n", line_no, p);
         ShellResult result = command_dispatch(p, &head);
         if (result == SHELL_EXIT) {
@@ -149,6 +149,7 @@ void run_command_file(const char *cmd_file, const char *csv_path) {
         }
         report_result(result, 1, line_no); // 오류 시 "Skipped line N."
     }
+    
 
     fclose(fp);
     student_free_all(&head); //종료 전 동적 메모리 해제 
